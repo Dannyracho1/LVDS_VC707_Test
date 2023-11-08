@@ -13,20 +13,22 @@ filename = "FMC2_Table_No_HB";
 
 %% MATLAB generate .UCF constraints --> FMC1
 
-a = 5;
-fprintf("Testing %i \n\n\n", a);
+% a = 5;
+% fprintf("Testing %i \n\n\n", a);
 
 % NET "Pin_P" LOC = A0;
 
 for i = 1:1:size(strings,1)
-    str = ['NET ' char(34) strings{i,1} char(34) ' LOC = ' strings{i,2}];
+    str = ['NET ' char(34) strings{i,1} char(34) ' LOC = ' strings{i,2} ';'];
     fprintf(str);
     fprintf('\n');
 end
 
+fprintf('\n\n\n');
+
 % NET "CLKIQ_N[7]" IOSTANDARD = LVDS;
 for i = 1:1:size(strings,1)
-    str = ['NET ' char(34) strings{i,1} char(34) ' IOSTANDARD = LVDS'];
+    str = ['NET ' char(34) strings{i,1} char(34) ' IOSTANDARD = LVDS;'];
     fprintf(str);
     fprintf('\n');
 end
